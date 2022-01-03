@@ -25,7 +25,7 @@ jobs:
             --output=build/index.html
             data.md
       - name: Archive build output
-        run: touch artifact.tar && tar --dereference --hard-dereference -cvf artifact.tar build
+        run: tar --dereference --hard-dereference --directory build/ -cvf artifact.tar .
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
