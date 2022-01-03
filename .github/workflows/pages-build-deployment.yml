@@ -4,10 +4,9 @@ on: [push]
 
 permissions:
   contents: read
-  metadata: read
   pages: write
   # via https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers
-  id-token: write
+  id-token: read
 
 jobs:
 
